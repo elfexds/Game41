@@ -1,0 +1,62 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <base target="_blank">  
+  <title>Hoho Games</title>  
+</head>  
+<body style="margin: 0; height: 100vh; overflow: hidden;">  
+
+  <div id="game-container"  
+    data='<iframe src="https://script.google.com/macros/s/AKfycbz0l3Pe409i6Ml54Nqsg_JeEu86c--3vbmWwHfSoK-qO5lniwLJsP7anbod6khPpB_l3Q/exec" width="100%" height="100%" scrolling="no" frameborder="0" allowfullscreen></iframe>'  
+    style="width: 100%; height: 100%;">  
+  </div>  
+
+  <button class="c-button" type="button" onclick="PlayTo()">  
+    play now  
+  </button>  
+
+  <style>  
+    body, html {  
+      height: 100%;  
+      margin: 0;  
+    }  
+
+    .c-button {  
+      position: absolute;  
+      top: 0;  
+      left: 0;  
+      width: 100%;  
+      height: 100%;  
+      font-family: fantasy;  
+      border: none;  
+      border-radius: 0;  
+      background: #000000;  
+      color: #fff;  
+      font-size: 30px;  
+      cursor: pointer;  
+      z-index: 10;  
+      display: flex;  
+      align-items: center;  
+      justify-content: center;  
+    }  
+
+    .c-button:hover {  
+      background: #696969;  
+    }  
+
+    .c-button:focus {  
+      outline: none;  
+      box-shadow: 0 0 0 4px #cbd6ee;  
+    }  
+  </style>  
+
+  <script>  
+    function PlayTo() {  
+      var div = document.getElementById('game-container');  
+      div.innerHTML = div.getAttribute('data');  
+      document.querySelector('.c-button').style.display = "none";  
+    }  
+  </script>  
+
+</body>  
+</html>
